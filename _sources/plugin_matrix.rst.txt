@@ -106,7 +106,8 @@ livespotting            livespotting.tv      Yes   No
 livestream              livestream.com       Yes   --
 lrt                     lrt.lt               Yes   No
 ltv_lsm_lv              ltv.lsm.lv           Yes   No    Streams may be geo-restricted to Latvia.
-mediaklikk              mediaklikk.hu        Yes   No    Streams may be geo-restricted to Hungary.
+mediaklikk              - mediaklikk.hu      Yes   No    Streams may be geo-restricted to Hungary.
+                        - m4sport.hu
 mitele                  mitele.es            Yes   No    Streams may be geo-restricted to Spain.
 mjunoon                 mjunoon.tv           Yes   Yes   Streams may be geo-restricted to Pakistan.
 mrtmk                   play.mrt.com.mk      Yes   Yes   Streams may be geo-restricted to North Macedonia.
@@ -172,6 +173,7 @@ sbscokr                 play.sbs.co.kr       Yes   No    Streams may be geo-rest
 schoolism               schoolism.com        --    Yes   Requires a login and a subscription.
 senategov               senate.gov           --    Yes   Supports hearing streams.
 showroom                showroom-live.com    Yes   No
+skylinewebcams          skylinewebcams.com   Yes   No
 sportal                 sportal.bg           Yes   No
 sportschau              sportschau.de        Yes   No
 ssh101                  ssh101.com           Yes   No
