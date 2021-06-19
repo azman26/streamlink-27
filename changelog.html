@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Donating" href="donate.html" /><link rel="prev" title="API Reference" href="api.html" />
 
     <meta name="generator" content="sphinx-3.3.1, furo 2020.12.09.beta21"/>
-        <title>Changelog - Streamlink[-27] 1.27.4.0 documentation</title>
+        <title>Changelog - Streamlink[-27] 1.27.5.0 documentation</title>
       <link rel="stylesheet" href="static/styles/furo.css?digest=a3f371badb8538d75df213ccffb17a4f6e8f3ac5">
     <link rel="stylesheet" href="static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="static/pygments_dark.css">
@@ -95,7 +95,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Streamlink[-27] 1.27.4.0 documentation</div></a>
+      <a href="index.html"><div class="brand">Streamlink[-27] 1.27.5.0 documentation</div></a>
     </div>
     <div class="header-right">
       <label class="toc-overlay-icon toc-header-icon" for="__toc">
@@ -114,7 +114,7 @@
   <p class="sidebar-brand-oneliner">A command-line utility that extracts streams from various services and pipes them into a video player of choice.</p>
 </a>
 <div class="sidebar-versions centered" role="note" aria-label="versions">
-  <pre class="sidebar-versions-current">1.27.4.0</pre>
+  <pre class="sidebar-versions-current">1.27.5.0</pre>
   <dl class="sidebar-versions-others">
     <dd><a href="/changelog.html" class="version-current">Stable</a></dd>
     <dd><a href="/latest/changelog.html" class="">Latest</a></dd>
@@ -165,6 +165,58 @@
   
   <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="streamlink-1-27-5-0-2021-06-19">
+<h2>streamlink 1.27.5.0 (2021-06-19)<a class="headerlink" href="#streamlink-1-27-5-0-2021-06-19" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Billy2011 &lt;kschmidt2007@googlemail.com&gt; (25):
+      v1.27.4.0-dev
+      utils.url: add encoding options to update_qsd (#3746)
+      plugins.tf1: fixed api_url (#3748)
+      plugins.onetv: cleanup (#3743)
+      plugins.mediavitrina: new plugin (#3743)
+      use range() from streamlink.compat
+      plugins.olympics: fix / rewrite
+      utils.url: fix update_scheme with implicit schemes (#3765)
+      plugins.bfmtv: fix/find Brightcove video data in JS (#3662)
+      plugins.skylinewebcams: fix hls url
+      tests: refactor TestCLIMainLogging (#3753)
+      plugins.zattoo: change api to hello_v3
+      plugin.api.validate: add nested lookups to get() (#3774)
+      plugin.api.validate: implement union_get() (#3774)
+      plugins.ine: removed (#3781)
+      plugins.zattoo: cleanup, fix other domains  master (#3780)
+      plugins.twitch: tidy up API calls (#3778)
+      stream.hls: replace custom PKCS#7 unpad function (#3770)
+      utils.named_pipe: rewrite named pipes (#3709)
+      cli: implement logfile
+      plugins.youtube: clean up a bit
+      plugins.youtube: update URL regex, translate URLs (#3797)
+      plugins.youtube: replace private API calls (#3797)
+      plugins.youtube: unescape consent form values (#3797)
+      prepare 1.27.5.0
+
+FaceHiddenInsideTheDark &lt;wesleywitz@gmail.com&gt; (1):
+      plugins.funimationnow: fix subtitle language (#3752)
+
+Ian Cameron &lt;1661072+mkbloke@users.noreply.github.com&gt; (1):
+      plugins.booyah: new plugin
+
+back-to &lt;backto@protonmail.ch&gt; (2):
+      plugin.api: update useragents, remove EDGE
+      plugins.playtv: removed - SEC_ERROR_EXPIRED_CERTIFICATE (#3798)
+
+bastimeyer &lt;mail@bastimeyer.de&gt; (6):
+      docs: set man_make_section_directory to false
+      tests.hls: test headers on segment+key requests
+      cli.argparser: fix description text
+      plugins.twitch: add access token to clips
+      plugins.twitch: fix clips URL regex
+      plugins.twitch: query hosted channels on GQL
+
+shirokumacode &lt;79662880+shirokumacode@users.noreply.github.com&gt; (1):
+      plugins.mildom: new plugin for mildom.com (#3584)
+</pre></div>
+</div>
+</div>
 <div class="section" id="streamlink-1-27-4-0-2021-05-21">
 <h2>streamlink 1.27.4.0 (2021-05-21)<a class="headerlink" href="#streamlink-1-27-4-0-2021-05-21" title="Permalink to this headline">¶</a></h2>
 <p>Release highlights:</p>
@@ -3291,6 +3343,7 @@ wolftankk &lt;wolftankk@gmail.com&gt; (3):
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#streamlink-1-27-5-0-2021-06-19">streamlink 1.27.5.0 (2021-06-19)</a></li>
 <li><a class="reference internal" href="#streamlink-1-27-4-0-2021-05-21">streamlink 1.27.4.0 (2021-05-21)</a></li>
 <li><a class="reference internal" href="#streamlink-1-27-3-0-2021-04-19">streamlink 1.27.3.0 (2021-04-19)</a></li>
 <li><a class="reference internal" href="#streamlink-1-27-2-1-2021-03-26">streamlink 1.27.2.1 (2021-03-26)</a></li>
