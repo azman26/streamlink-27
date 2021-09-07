@@ -3,8 +3,8 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Donating" href="donate.html" /><link rel="prev" title="API Reference" href="api.html" />
 
-    <meta name="generator" content="sphinx-3.3.1, furo 2020.12.09.beta21"/>
-        <title>Changelog - Streamlink[-27] 1.27.6.0 documentation</title>
+    <meta name="generator" content="sphinx-4.1.2, furo 2020.12.09.beta21"/>
+        <title>Changelog - Streamlink[-27] 1.27.7.0 documentation</title>
       <link rel="stylesheet" href="static/styles/furo.css?digest=a3f371badb8538d75df213ccffb17a4f6e8f3ac5">
     <link rel="stylesheet" href="static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="static/pygments_dark.css">
@@ -36,17 +36,19 @@
   --color-code-foreground: #d0d0d0;
   
   }
-</style><link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="static/pygments_dark.css" />
+</style><link rel="stylesheet" type="text/css" href="static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="static/styles/furo.css" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="static/pygments_dark.css" />
     <link rel="stylesheet" type="text/css" href="static/styles/custom.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/solid.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css" />
     <link rel="stylesheet" href="static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60">
     <script id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+    <script defer data-url_root="./" id="documentation_options" src="static/documentation_options.js"></script>
     <script defer src="static/jquery.js"></script>
     <script defer src="static/underscore.js"></script>
     <script defer src="static/doctools.js"></script>
-    <script defer src="static/language_data.js"></script>
     <script defer src="static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></head>
   <body dir="">
     
@@ -95,7 +97,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Streamlink[-27] 1.27.6.0 documentation</div></a>
+      <a href="index.html"><div class="brand">Streamlink[-27] 1.27.7.0 documentation</div></a>
     </div>
     <div class="header-right">
       <label class="toc-overlay-icon toc-header-icon" for="__toc">
@@ -114,7 +116,7 @@
   <p class="sidebar-brand-oneliner">A command-line utility that extracts streams from various services and pipes them into a video player of choice.</p>
 </a>
 <div class="sidebar-versions centered" role="note" aria-label="versions">
-  <pre class="sidebar-versions-current">1.27.6.0</pre>
+  <pre class="sidebar-versions-current">1.27.7.0</pre>
   <dl class="sidebar-versions-others">
     <dd><a href="/changelog.html" class="version-current">Stable</a></dd>
     <dd><a href="/latest/changelog.html" class="">Latest</a></dd>
@@ -166,6 +168,58 @@
   
   <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="streamlink-1-27-7-0-2021-09-07">
+<h2>streamlink 1.27.7.0 (2021-09-07)<a class="headerlink" href="#streamlink-1-27-7-0-2021-09-07" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Billy2011 &lt;kschmidt2007@googlemail.com&gt; (31):
+      docs: fix / update deprecations page
+      session: deprecate options for spec. stream types (#3893)
+      stream.hls: remove hls-segment-stream-data option (#3894)
+      stream.hls: except more errors raised by requests (#3902)
+      plugins.raiplay: use 'res.encoding = "UTF-8"' (#3904)
+      plugins.rtve: update for /play/ URLs (#3905)
+      plugins.zattoo: fix HLS stream, added more debug details
+      plugins.nbcnews: fix stream URL extraction (#3909)
+      docs: update python-requests version comment (#3928)
+      plugins.twitch: replace remaining kraken API calls (#3929)
+      plugins.twitch: refactor TwitchAPI class methods (#3929)
+      setup: update requests version (#3880)&gt;=2.26.0
+      plugins.huomao: plugin removal (#3932)
+      plugins.sportschau: fix audio streams (#3947)
+      plugins.animelab: removed (#3951)
+      plugins.svtplay: fix plugin video id (#3949)
+      vendor: add lxml dependency (#3952)
+      plugins.deutschewelle: rewrite plugin (#3953)
+      plugins.gardenersworld: remove plugin (#3966)
+      plugin.api.validate: switch to lxml.etree (#3967)
+      plugins.booyah: add support for source stream (#3969)
+      plugin.api.validate: add args+kwargs to transform (#3972)
+      plugin.api.validate: add parse_{json,html,xml,qsd} (#3972)
+      plugin: metadata attributes (#3970)
+      plugins.deutschewelle: validate.parse_html (#3975)
+      plugins.reuters: rewrite and fix using XPath (#3977)
+      plugins.euronews: rewrite and fix using XPath (#3976)
+      utils.__init__: make typing optional
+      stream.ffmpegmux: always clean up named pipes (#3992)
+
+Ian Cameron &lt;1661072+mkbloke@users.noreply.github.com&gt; (1):
+      plugins.pluto: fix URL match for 2 letter language codes
+
+back-to &lt;backto@protonmail.ch&gt; (1):
+      plugins.abematv: skip invalid ad segments
+
+bastimeyer &lt;mail@bastimeyer.de&gt; (6):
+      docs: reorganize stream transport options
+      tests: fix Plugin.bind(session) calls
+      plugin: fix cookie related error messages
+      plugins.euronews: add API fallback requests
+      plugins: fix utils imports
+      plugins.welt: rewrite and simplify using XPath
+
+steven7851 &lt;steven7851@msn.com&gt; (1):
+      plugins.app17: fix API_URL and URL match (#3989)
+</pre></div>
+</div>
+</div>
 <div class="section" id="streamlink-1-27-6-0-2021-07-27">
 <h2>streamlink 1.27.6.0 (2021-07-27)<a class="headerlink" href="#streamlink-1-27-6-0-2021-07-27" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Billy2011 &lt;kschmidt2007@googlemail.com&gt; (28):
@@ -1339,7 +1393,7 @@ lon &lt;rliouke@gmail.com&gt; (1):
 </ul>
 <p><strong>Breaking changes:</strong></p>
 <ul class="simple">
-<li><p>A large number of unmaintained or NSFW plugins have been removed. You can find the PR that implemented that change here: https://github.com/streamlink/streamlink/pull/2003 . See our <a class="reference external" href="https://github.com/streamlink/streamlink/blob/130489c6f5ad15488cd4ff7a25c74bf070f163ec/CONTRIBUTING">CONTRIBUTING.md</a> documentation for plugin policy.</p></li>
+<li><p>A large number of unmaintained or NSFW plugins have been removed. You can find the PR that implemented that change here: https://github.com/streamlink/streamlink/pull/2003 . See our <a class="reference external" href="https://github.com/streamlink/streamlink/blob/130489c6f5ad15488cd4ff7a25c74bf070f163ec/CONTRIBUTING.md">CONTRIBUTING.md</a> documentation for plugin policy.</p></li>
 </ul>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Billy2011 &lt;kschmidt2007@googlemail.com&gt; (3):
       streamlink.plugins: replace global http session by self.session.http (#1925)
@@ -3395,6 +3449,7 @@ wolftankk &lt;wolftankk@gmail.com&gt; (3):
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#streamlink-1-27-7-0-2021-09-07">streamlink 1.27.7.0 (2021-09-07)</a></li>
 <li><a class="reference internal" href="#streamlink-1-27-6-0-2021-07-27">streamlink 1.27.6.0 (2021-07-27)</a></li>
 <li><a class="reference internal" href="#streamlink-1-27-5-0-2021-06-19">streamlink 1.27.5.0 (2021-06-19)</a></li>
 <li><a class="reference internal" href="#streamlink-1-27-4-0-2021-05-21">streamlink 1.27.4.0 (2021-05-21)</a></li>

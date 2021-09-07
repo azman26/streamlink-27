@@ -3,8 +3,8 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Developing" href="developing.html" /><link rel="prev" title="Common issues" href="issues.html" />
 
-    <meta name="generator" content="sphinx-3.3.1, furo 2020.12.09.beta21"/>
-        <title>Deprecations - Streamlink[-27] 1.27.6.0 documentation</title>
+    <meta name="generator" content="sphinx-4.1.2, furo 2020.12.09.beta21"/>
+        <title>Deprecations - Streamlink[-27] 1.27.7.0 documentation</title>
       <link rel="stylesheet" href="static/styles/furo.css?digest=a3f371badb8538d75df213ccffb17a4f6e8f3ac5">
     <link rel="stylesheet" href="static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="static/pygments_dark.css">
@@ -36,17 +36,19 @@
   --color-code-foreground: #d0d0d0;
   
   }
-</style><link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="static/pygments_dark.css" />
+</style><link rel="stylesheet" type="text/css" href="static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="static/styles/furo.css" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="static/pygments_dark.css" />
     <link rel="stylesheet" type="text/css" href="static/styles/custom.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/solid.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css" />
     <link rel="stylesheet" href="static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60">
     <script id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+    <script defer data-url_root="./" id="documentation_options" src="static/documentation_options.js"></script>
     <script defer src="static/jquery.js"></script>
     <script defer src="static/underscore.js"></script>
     <script defer src="static/doctools.js"></script>
-    <script defer src="static/language_data.js"></script>
     <script defer src="static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></head>
   <body dir="">
     
@@ -95,7 +97,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Streamlink[-27] 1.27.6.0 documentation</div></a>
+      <a href="index.html"><div class="brand">Streamlink[-27] 1.27.7.0 documentation</div></a>
     </div>
     <div class="header-right">
       <label class="toc-overlay-icon toc-header-icon" for="__toc">
@@ -114,7 +116,7 @@
   <p class="sidebar-brand-oneliner">A command-line utility that extracts streams from various services and pipes them into a video player of choice.</p>
 </a>
 <div class="sidebar-versions centered" role="note" aria-label="versions">
-  <pre class="sidebar-versions-current">1.27.6.0</pre>
+  <pre class="sidebar-versions-current">1.27.7.0</pre>
   <dl class="sidebar-versions-others">
     <dd><a href="/deprecations.html" class="version-current">Stable</a></dd>
     <dd><a href="/latest/deprecations.html" class="">Latest</a></dd>
@@ -166,11 +168,25 @@
   
   <div class="section" id="deprecations">
 <h1>Deprecations<a class="headerlink" href="#deprecations" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>1.27.5.0<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="streamlink-1-27-7-0">
+<h2>streamlink 1.27.7.0<a class="headerlink" href="#streamlink-1-27-7-0" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="stream-type-related-cli-arguments">
+<h3>Stream-type related CLI arguments<a class="headerlink" href="#stream-type-related-cli-arguments" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="cli.html#stream-transport-options"><span class="std std-ref">Stream-type related CLI arguments</span></a> and the respective <a class="reference internal" href="api.html#session"><span class="std std-ref">Session options</span></a>
+have been deprecated in favor of existing generic arguments/options, to avoid redundancy and potential confusion.</p>
+<ul class="simple">
+<li><p>use <a class="reference internal" href="cli.html#cmdoption-stream-segment-attempts"><code class="xref std std-option docutils literal notranslate"><span class="pre">--stream-segment-attempts</span></code></a> instead of <code class="docutils literal notranslate"><span class="pre">--{dash,hds,hls}-segment-attempts</span></code></p></li>
+<li><p>use <a class="reference internal" href="cli.html#cmdoption-stream-segment-threads"><code class="xref std std-option docutils literal notranslate"><span class="pre">--stream-segment-threads</span></code></a> instead of <code class="docutils literal notranslate"><span class="pre">--{dash,hds,hls}-segment-threads</span></code></p></li>
+<li><p>use <a class="reference internal" href="cli.html#cmdoption-stream-segment-timeout"><code class="xref std std-option docutils literal notranslate"><span class="pre">--stream-segment-timeout</span></code></a> instead of <code class="docutils literal notranslate"><span class="pre">--{dash,hds,hls}-segment-timeout</span></code></p></li>
+<li><p>use <a class="reference internal" href="cli.html#cmdoption-stream-timeout"><code class="xref std std-option docutils literal notranslate"><span class="pre">--stream-timeout</span></code></a> instead of <code class="docutils literal notranslate"><span class="pre">--{dash,hds,hls,rtmp,http-stream}-timeout</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="streamlink-1-27-6-0">
+<h2>streamlink 1.27.6.0<a class="headerlink" href="#streamlink-1-27-6-0" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="plugin-can-handle-url-and-plugin-priority">
 <h3>Plugin.can_handle_url() and Plugin.priority()<a class="headerlink" href="#plugin-can-handle-url-and-plugin-priority" title="Permalink to this headline">¶</a></h3>
-<p>A new plugin URL matching API was introduced in 1.27.5.0 which will help Streamlink with static code analysis and an improved
+<p>A new plugin URL matching API was introduced in 1.27.6.0 which will help Streamlink with static code analysis and an improved
 plugin loading mechanism in the future. Plugins now define their matching URLs and priorities declaratively.</p>
 <p>The old <code class="docutils literal notranslate"><span class="pre">can_handle_url</span></code> and <code class="docutils literal notranslate"><span class="pre">priority</span></code> classmethods have therefore been deprecated and will be removed in the future.
 When side-loading plugins which don't implement the new <code class="docutils literal notranslate"><span class="pre">@pluginmatcher</span></code> but implement the old classmethods, a deprecation
@@ -295,7 +311,11 @@ multiple <code class="docutils literal notranslate"><span class="pre">@pluginmat
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Deprecations</a><ul>
-<li><a class="reference internal" href="#id1">1.27.5.0</a><ul>
+<li><a class="reference internal" href="#streamlink-1-27-7-0">streamlink 1.27.7.0</a><ul>
+<li><a class="reference internal" href="#stream-type-related-cli-arguments">Stream-type related CLI arguments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#streamlink-1-27-6-0">streamlink 1.27.6.0</a><ul>
 <li><a class="reference internal" href="#plugin-can-handle-url-and-plugin-priority">Plugin.can_handle_url() and Plugin.priority()</a></li>
 </ul>
 </li>
