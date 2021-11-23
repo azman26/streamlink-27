@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
 
     <meta name="generator" content="sphinx-4.1.2, furo 2021.09.08"/>
-        <title>Streamlink - Streamlink[-27] 1.27.8.0 documentation</title>
+        <title>Streamlink - Streamlink[-27] 2.27.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo.css?digest=c7c65a82b42f6b978e58466c1e9ef2509836d916" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
@@ -126,7 +126,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Streamlink[-27] 1.27.8.0 documentation</div></a>
+      <a href="index.html"><div class="brand">Streamlink[-27] 2.27.0.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -154,7 +154,7 @@
   <p class="sidebar-brand-oneliner">A command-line utility that extracts streams from various services and pipes them into a video player of choice.</p>
 </a>
 <div class="sidebar-versions centered" role="note" aria-label="versions">
-  <pre class="sidebar-versions-current">1.27.8.0</pre>
+  <pre class="sidebar-versions-current">2.27.0.0</pre>
   <dl class="sidebar-versions-others">
     <dd><a href="/_man.html" class="version-current">Stable</a></dd>
     <dd><a href="/latest/_man.html" class="">Latest</a></dd>
@@ -696,7 +696,7 @@ giving up.</p>
 streams with the same name but different stream types. Any stream type
 not listed will be omitted from the available streams list.  A <code class="docutils literal notranslate"><span class="pre">*</span></code> can
 be used as a wildcard to match any other type of stream, eg. muxed-stream.</p>
-<p>Default is: <strong>"rtmp,hls,hds,http,akamaihd,*"</strong>.</p>
+<p>Default is: <strong>"rtmp,hls,http,*"</strong>.</p>
 </dd></dl>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-stream-sorting-excludes">
@@ -739,35 +739,35 @@ background as long as the ringbuffer doesn't get full.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A smaller size is recommended on lower end systems (such as Raspberry Pi) when playing stream types that require
-some extra processing (such as HDS) to avoid unnecessary background processing.</p>
+some extra processing to avoid unnecessary background processing.</p>
 </div>
 </dd></dl>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-stream-segment-attempts">
 <span class="sig-name descname"><span class="pre">--stream-segment-attempts</span></span><span class="sig-prename descclassname"> <span class="pre">ATTEMPTS</span></span><a class="headerlink" href="#cmdoption-stream-segment-attempts" title="Permalink to this definition">¶</a></dt>
 <dd><p>How many attempts should be done to download each segment before giving up.</p>
-<p>This applies to all different kinds of segmented stream types, such as DASH, HDS, HLS, etc.</p>
+<p>This applies to all different kinds of segmented stream types, such as DASH, HLS, etc.</p>
 <p>Default is: <strong>3</strong>.</p>
 </dd></dl>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-stream-segment-threads">
 <span class="sig-name descname"><span class="pre">--stream-segment-threads</span></span><span class="sig-prename descclassname"> <span class="pre">THREADS</span></span><a class="headerlink" href="#cmdoption-stream-segment-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of the thread pool used to download segments. Minimum value is 1 and maximum is 10.</p>
-<p>This applies to all different kinds of segmented stream types, such as DASH, HDS, HLS, etc.</p>
+<p>This applies to all different kinds of segmented stream types, such as DASH, HLS, etc.</p>
 <p>Default is: <strong>1</strong>.</p>
 </dd></dl>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-stream-segment-timeout">
 <span class="sig-name descname"><span class="pre">--stream-segment-timeout</span></span><span class="sig-prename descclassname"> <span class="pre">TIMEOUT</span></span><a class="headerlink" href="#cmdoption-stream-segment-timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Segment connect and read timeout.</p>
-<p>This applies to all different kinds of segmented stream types, such as DASH, HDS, HLS, etc.</p>
+<p>This applies to all different kinds of segmented stream types, such as DASH, HLS, etc.</p>
 <p>Default is: <strong>10.0</strong>.</p>
 </dd></dl>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-stream-timeout">
 <span class="sig-name descname"><span class="pre">--stream-timeout</span></span><span class="sig-prename descclassname"> <span class="pre">TIMEOUT</span></span><a class="headerlink" href="#cmdoption-stream-timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timeout for reading data from streams.</p>
-<p>This applies to all different kinds of stream types, such as DASH, HDS, HLS, HTTP, RTMP, etc.</p>
+<p>This applies to all different kinds of stream types, such as DASH, HLS, HTTP, RTMP, etc.</p>
 <p>Default is: <strong>60.0</strong>.</p>
 </dd></dl>
 <dl class="std option">
@@ -777,15 +777,6 @@ some extra processing (such as HDS) to avoid unnecessary background processing.<
 <p>Needs to be supported by the used plugin.</p>
 <p><strong>Supported plugins:</strong> funimationnow, rtve, svtplay, vimeo</p>
 </dd></dl>
-<div class="section" id="hds-options">
-<h3>HDS options<a class="headerlink" href="#hds-options" title="Permalink to this headline">¶</a></h3>
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-hds-live-edge">
-<span class="sig-name descname"><span class="pre">--hds-live-edge</span></span><span class="sig-prename descclassname"> <span class="pre">SECONDS</span></span><a class="headerlink" href="#cmdoption-hds-live-edge" title="Permalink to this definition">¶</a></dt>
-<dd><p>The time live HDS streams will start from the edge of the stream.</p>
-<p>Default is: <strong>10.0</strong>.</p>
-</dd></dl>
-</div>
 <div class="section" id="hls-options">
 <h3>HLS options<a class="headerlink" href="#hls-options" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
@@ -804,6 +795,11 @@ overridden with <a class="reference internal" href="cli.html#cmdoption-hls-playl
 this, please refer to the player's own documentation for the required configuration. Player parameters can be set via
 <a class="reference internal" href="cli.html#cmdoption-player-args"><code class="xref std std-option docutils literal notranslate"><span class="pre">--player-args</span></code></a>.</p>
 </div>
+</dd></dl>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-hls-segment-stream-data">
+<span class="sig-name descname"><span class="pre">--hls-segment-stream-data</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-hls-segment-stream-data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Immediately write segment data into output buffer while downloading.</p>
 </dd></dl>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-hls-playlist-reload-attempts">
@@ -986,15 +982,8 @@ the initial start time offset value.</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-http-proxy">
 <span class="sig-name descname"><span class="pre">--http-proxy</span></span><span class="sig-prename descclassname"> <span class="pre">HTTP_PROXY</span></span><a class="headerlink" href="#cmdoption-http-proxy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A HTTP proxy to use for all HTTP requests, including WebSocket connections.
-By default this proxy will be used for all HTTPS requests too.</p>
+<dd><p>A HTTP proxy to use for all HTTP and HTTPS requests, including WebSocket connections.</p>
 <p>Example: "<a class="reference external" href="http://hostname:port/">http://hostname:port/</a>"</p>
-</dd></dl>
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-https-proxy">
-<span class="sig-name descname"><span class="pre">--https-proxy</span></span><span class="sig-prename descclassname"> <span class="pre">HTTPS_PROXY</span></span><a class="headerlink" href="#cmdoption-https-proxy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A HTTPS capable proxy to use for all HTTPS requests.</p>
-<p>Example: "<a class="reference external" href="https://hostname:port/">https://hostname:port/</a>"</p>
 </dd></dl>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-http-cookie">
@@ -1198,8 +1187,7 @@ and the session ID does not match the account.</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-niconico-purge-credentials">
 <span class="sig-name descname"><span class="pre">--niconico-purge-credentials</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-niconico-purge-credentials" title="Permalink to this definition">¶</a></dt>
-<dd><p>Purge cached Niconico credentials to initiate a new session
-and reauthenticate.</p>
+<dd><p>Purge cached Niconico credentials to initiate a new session and reauthenticate.</p>
 </dd></dl>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-niconico-timeshift-offset">
@@ -1331,8 +1319,8 @@ Will cause these segments to be missing from the stream.</p>
 <dt class="sig sig-object std" id="cmdoption-twitch-low-latency">
 <span class="sig-name descname"><span class="pre">--twitch-low-latency</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-twitch-low-latency" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables low latency streaming by prefetching HLS segments.
-Sets <a class="reference internal" href="cli.html#cmdoption-hls-live-edge"><code class="xref std std-option docutils literal notranslate"><span class="pre">--hls-live-edge</span></code></a> to 2, if it is higher.
-Reducing it to 1 will result in the lowest latency possible, but will most likely cause buffering.</p>
+Sets <a class="reference internal" href="cli.html#cmdoption-hls-segment-stream-data"><code class="xref std std-option docutils literal notranslate"><span class="pre">--hls-segment-stream-data</span></code></a> to true and <a class="reference internal" href="cli.html#cmdoption-hls-live-edge"><code class="xref std std-option docutils literal notranslate"><span class="pre">--hls-live-edge</span></code></a> to 2, if it is higher.
+Reducing <a class="reference internal" href="cli.html#cmdoption-hls-live-edge"><code class="xref std std-option docutils literal notranslate"><span class="pre">--hls-live-edge</span></code></a> to 1 will result in the lowest latency possible, but will most likely cause buffering.</p>
 <p>In order to achieve true low latency streaming during playback, the player's caching/buffering settings will
 need to be adjusted and reduced to a value as low as possible, but still high enough to not cause any buffering.
 This depends on the stream's bitrate and the quality of the connection to Twitch's servers. Please refer to the
@@ -1342,6 +1330,12 @@ player's own documentation for the required configuration. Player parameters can
 <p>Low latency streams have to be enabled by the broadcasters on Twitch themselves.
 Regular streams can cause buffering issues with this option enabled due to the reduced <a class="reference internal" href="cli.html#cmdoption-hls-live-edge"><code class="xref std std-option docutils literal notranslate"><span class="pre">--hls-live-edge</span></code></a> value.</p>
 </div>
+</dd></dl>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-twitch-api-header">
+<span class="sig-name descname"><span class="pre">--twitch-api-header</span></span><span class="sig-prename descclassname"> <span class="pre">KEY=VALUE</span></span><a class="headerlink" href="#cmdoption-twitch-api-header" title="Permalink to this definition">¶</a></dt>
+<dd><p>A header to add to each Twitch API HTTP request.</p>
+<p>Can be repeated to add multiple headers.</p>
 </dd></dl>
 </div>
 <div class="section" id="ustreamtv">
@@ -1477,7 +1471,6 @@ the following types are allowed:</p>
 <li><a class="reference internal" href="#file-output-options">File output options</a></li>
 <li><a class="reference internal" href="#stream-options">Stream options</a></li>
 <li><a class="reference internal" href="#stream-transport-options">Stream transport options</a><ul>
-<li><a class="reference internal" href="#hds-options">HDS options</a></li>
 <li><a class="reference internal" href="#hls-options">HLS options</a></li>
 <li><a class="reference internal" href="#rtmp-options">RTMP options</a></li>
 <li><a class="reference internal" href="#subprocess-options">Subprocess options</a></li>
